@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- pycsw 2.4.2 -->
+<csw:GetRecordByIdResponse xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml" xmlns:ows="http://www.opengis.net/ows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd">
+  <csw:Record>
+    <dc:identifier>13f4c164-af2c-11ea-9db7-a8a1590f2dab</dc:identifier>
+    <dc:title>CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon</dc:title>
+    <dc:type>dataset</dc:type>
+    <dc:subject>features</dc:subject>
+    <dc:subject>hti_boundaries_communes_adm2_cnigs_polygon</dc:subject>
+    <dc:subject scheme="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_TopicCategoryCode">boundaries</dc:subject>
+    <dc:format>vector</dc:format>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/download/39</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?layers=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;service=WMS&amp;format=image%2Fjpeg&amp;request=GetMap&amp;height=550&amp;width=550&amp;bbox=-74.480400085449200%2C18.022138595581100%2C-71.622146606445300%2C20.089227676391600&amp;srs=EPSG%3A4326</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?layers=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;service=WMS&amp;format=application%2Fpdf&amp;request=GetMap&amp;height=550&amp;width=550&amp;bbox=-74.480400085449200%2C18.022138595581100%2C-71.622146606445300%2C20.089227676391600&amp;srs=EPSG%3A4326</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?layers=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;service=WMS&amp;format=image%2Fpng&amp;request=GetMap&amp;height=550&amp;width=550&amp;bbox=-74.480400085449200%2C18.022138595581100%2C-71.622146606445300%2C20.089227676391600&amp;srs=EPSG%3A4326</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?outputFormat=SHAPE-ZIP&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;format_options=charset%3AUTF-8&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?outputFormat=gml2&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?outputFormat=csv&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?outputFormat=excel&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?srsName=EPSG%3A4326&amp;outputFormat=json&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0</dct:references>
+    <dct:references scheme="WWW:LINK-1.0-http--link">https://haitidata.org/layers/geonode_data:geonode:hti_boundaries_communes_adm2_cnigs_polygon</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image/png&amp;WIDTH=20&amp;HEIGHT=20&amp;LAYER=geonode:hti_boundaries_communes_adm2_cnigs_polygon&amp;STYLE=hti_boundaries_communes_adm2_cnigs_polygon&amp;legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">20.089227676391600</dct:references>
+    <dct:references scheme="WWW:DOWNLOAD-1.0-http--download">https://haitidata.org/uploaded/thumbs/layer-13f4c164-af2c-11ea-9db7-a8a1590f2dab-thumb.png</dct:references>
+    <dct:references scheme="OGC:WMS">https://haitidata.org/geoserver/ows</dct:references>
+    <dct:references scheme="OGC:WFS">https://haitidata.org/geoserver/ows</dct:references>
+    <dct:modified>2017-10-02T22:00:00Z</dct:modified>
+    <dct:abstract>No abstract provided</dct:abstract>
+    <dc:date>2017-10-02T22:00:00Z</dc:date>
+    <dc:creator>CNIGS</dc:creator>
+    <dc:publisher>Boby Emmanuel Piard</dc:publisher>
+    <dc:contributor>Boby Emmanuel Piard</dc:contributor>
+    <dc:language>eng</dc:language>
+    <dct:alternative>geonode:hti_boundaries_communes_adm2_cnigs_polygon</dct:alternative>
+    <dct:spatial scheme="http://www.opengis.net/def/crs">EPSG:4326</dct:spatial>
+    <ows:BoundingBox crs="urn:x-ogc:def:crs:EPSG:6.11:4326" dimensions="2">
+      <ows:LowerCorner>18.022139 -74.4804</ows:LowerCorner>
+      <ows:UpperCorner>20.089228 -71.622147</ows:UpperCorner>
+    </ows:BoundingBox>
+  </csw:Record>
+</csw:GetRecordByIdResponse>

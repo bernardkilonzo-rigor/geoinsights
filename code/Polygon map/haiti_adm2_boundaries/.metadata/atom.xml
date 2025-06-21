@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- pycsw 2.4.2 -->
+<csw:GetRecordByIdResponse xmlns:atom="http://www.w3.org/2005/Atom" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml" xmlns:ows="http://www.opengis.net/ows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd">
+  <atom:entry xmlns:georss="http://www.georss.org/georss" xsi:schemaLocation="http://www.w3.org/2005/Atom http://www.kbcafe.com/rss/atom.xsd.xml">
+    <atom:author>
+      <atom:name>CNIGS</atom:name>
+    </atom:author>
+    <atom:category term="features"/>
+    <atom:category term="hti_boundaries_communes_adm2_cnigs_polygon"/>
+    <atom:contributor>Boby Emmanuel Piard</atom:contributor>
+    <atom:id>13f4c164-af2c-11ea-9db7-a8a1590f2dab</atom:id>
+    <dc:identifier>13f4c164-af2c-11ea-9db7-a8a1590f2dab</dc:identifier>
+    <atom:link href="https://haitidata.org/download/39" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (Original Dataset Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?layers=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;service=WMS&amp;format=image%2Fjpeg&amp;request=GetMap&amp;height=550&amp;width=550&amp;bbox=-74.480400085449200%2C18.022138595581100%2C-71.622146606445300%2C20.089227676391600&amp;srs=EPSG%3A4326" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (JPEG Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?layers=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;service=WMS&amp;format=application%2Fpdf&amp;request=GetMap&amp;height=550&amp;width=550&amp;bbox=-74.480400085449200%2C18.022138595581100%2C-71.622146606445300%2C20.089227676391600&amp;srs=EPSG%3A4326" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (PDF Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?layers=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;service=WMS&amp;format=image%2Fpng&amp;request=GetMap&amp;height=550&amp;width=550&amp;bbox=-74.480400085449200%2C18.022138595581100%2C-71.622146606445300%2C20.089227676391600&amp;srs=EPSG%3A4326" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (PNG Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?outputFormat=SHAPE-ZIP&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;format_options=charset%3AUTF-8&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (Zipped Shapefile Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?outputFormat=gml2&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (GML 2.0 Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (GML 3.1.1 Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?outputFormat=csv&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (CSV Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?outputFormat=excel&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (Excel Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?srsName=EPSG%3A4326&amp;outputFormat=json&amp;service=WFS&amp;srs=EPSG%3A4326&amp;request=GetFeature&amp;typename=geonode%3Ahti_boundaries_communes_adm2_cnigs_polygon&amp;version=1.0.0" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (GeoJSON Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/layers/geonode_data:geonode:hti_boundaries_communes_adm2_cnigs_polygon" title="Web address (URL)" type="WWW:LINK-1.0-http--link"/>
+    <atom:link href="https://haitidata.org/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image/png&amp;WIDTH=20&amp;HEIGHT=20&amp;LAYER=geonode:hti_boundaries_communes_adm2_cnigs_polygon&amp;STYLE=hti_boundaries_communes_adm2_cnigs_polygon&amp;legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (Legend Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="20.089227676391600" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (Remote Thumbnail Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/uploaded/thumbs/layer-13f4c164-af2c-11ea-9db7-a8a1590f2dab-thumb.png" title="CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon (Thumbnail Format)" type="WWW:DOWNLOAD-1.0-http--download"/>
+    <atom:link href="https://haitidata.org/geoserver/ows" title="OGC WMS: geonode Service" type="OGC:WMS"/>
+    <atom:link href="https://haitidata.org/geoserver/ows" title="OGC WFS: geonode Service" type="OGC:WFS"/>
+    <atom:link href="https://haitidata.org/catalogue/csw?service=CSW&amp;version=2.0.2&amp;request=GetRepositoryItem&amp;id=13f4c164-af2c-11ea-9db7-a8a1590f2dab"/>
+    <atom:title>CNIGS Spatial Data Haiti Boundaries Communes Adm2 Polygon</atom:title>
+    <atom:updated>2017-10-02T22:00:00Z</atom:updated>
+    <atom:published>2017-10-02T22:00:00Z</atom:published>
+    <atom:summary>No abstract provided</atom:summary>
+    <georss:where>
+      <gml:Envelope srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+        <gml:lowerCorner>18.022139 -74.4804</gml:lowerCorner>
+        <gml:upperCorner>20.089228 -71.622147</gml:upperCorner>
+      </gml:Envelope>
+    </georss:where>
+  </atom:entry>
+</csw:GetRecordByIdResponse>
