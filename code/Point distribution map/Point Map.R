@@ -21,9 +21,8 @@ africa_map <- world_map %>%
                        "Somalia", "South Africa", "South Sudan", "Sudan", "Tanzania", "Togo",
                        "Tunisia", "Uganda", "Zambia", "Zimbabwe"))
 
-
 #Creating point distribution map
-ggplot()+
+p_map<-ggplot()+
   geom_polygon(data = africa_map, aes(x =long, y = lat, group = group),
                fill ="white", color = "gray35", linewidth =0.1)+
   geom_point(data = conflict_data, aes(x = Longitude, y = Latitude, size = Fatalities), alpha = 0.4)+
@@ -41,3 +40,7 @@ ggplot()+
         plot.title = element_text(family = "serif", face = "bold", size = 12, color = "gray20"),
         plot.subtitle = element_text(family = "serif", size = 10, color = "gray20"),
         plot.caption = element_text(family = "serif", face = "italic", size = 9, color = "gray35"))
+
+#saving the plot
+ggsave(plot = p_map, filename = "Point_map.png",
+       width = 8, height = 6, units = "in", dpi = 300) 
