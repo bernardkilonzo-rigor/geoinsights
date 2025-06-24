@@ -25,6 +25,10 @@ africa_map <- world_map %>%
 #Creating point distribution map
 ggplot()+
   geom_polygon(data = africa_map, aes(x =long, y = lat, group = group),
-               fill ="white", color = "gray")+
-  geom_point(data = conflict_data, aes(x = Longitude, y = Latitude, size = Fatalities))+
-  coord_quickmap()
+               fill ="white", color = "gray35", linewidth =0.1)+
+  geom_point(data = conflict_data, aes(x = Longitude, y = Latitude, size = Fatalities), alpha = 0.4)+
+  coord_quickmap()+
+  theme(panel.background = element_blank(),
+        axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank())
