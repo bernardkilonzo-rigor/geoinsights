@@ -28,7 +28,16 @@ ggplot()+
                fill ="white", color = "gray35", linewidth =0.1)+
   geom_point(data = conflict_data, aes(x = Longitude, y = Latitude, size = Fatalities), alpha = 0.4)+
   coord_quickmap()+
+  labs(title = "Political Conflict in Africa",
+       subtitle = "Reported Fatalities by Location",
+       caption = "Viz by: Bernard Kilonzo")+
   theme(panel.background = element_blank(),
+        panel.grid = element_blank(),
         axis.title = element_blank(),
         axis.text = element_blank(),
-        axis.ticks = element_blank())
+        axis.ticks = element_blank(),
+        plot.background = element_rect(fill = "gray95"),
+        legend.background = element_rect(fill = "gray95"),
+        plot.title = element_text(family = "serif", face = "bold", size = 12, color = "gray20"),
+        plot.subtitle = element_text(family = "serif", size = 10, color = "gray20"),
+        plot.caption = element_text(family = "serif", face = "italic", size = 9, color = "gray35"))
