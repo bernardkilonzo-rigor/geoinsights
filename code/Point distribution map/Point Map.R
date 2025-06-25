@@ -17,6 +17,10 @@ conflict_data<-conflict_data%>%mutate(bin = case_when(
   Fatalities>100 ~"101+"
 ))
 
+#ordering the bins
+conflict_data$bin<-factor(conflict_data$bin, levels = c("0","1-10","11-20","21-30",
+                                                        "31-50","51-100","101+"))
+
 #load world map data
 world_map<-map_data("world")
 
@@ -38,10 +42,12 @@ ggplot()+
   geom_polygon(data = africa_map, aes(x =long, y = lat, group = group),
                fill ="white", color = "gray35", linewidth =0.1)+
   geom_point(data = conflict_data, aes(x = Longitude, y = Latitude, size = Fatalities, color = bin), alpha = 0.4)+
+  scale_color_manual(values = c("#2c5c8a","#5f81af","#77acd3","#d9d5c9",
+                                "#f69035","#d45b21","#9e3d22"))+
   coord_quickmap()+
   labs(title = "Political Conflict in Africa",
        subtitle = "Reported Fatalities by Location",
-       caption = "Viz by: Bernard Kilonzo")+
+       caption = "Viz by: Bernard Kilonzo", color = "Fatalities")+
   theme(panel.background = element_blank(),
         panel.grid = element_blank(),
         axis.title = element_blank(),
@@ -49,6 +55,8 @@ ggplot()+
         axis.ticks = element_blank(),
         plot.background = element_rect(fill = "gray95"),
         legend.background = element_rect(fill = "gray95"),
+        legend.title = element_text(family = "serif", size = 10, color = "gray25"),
+        legend.text = element_text(family = "serif", size = 9, color = "gray25"),
         plot.title = element_text(family = "serif", face = "bold", size = 12, color = "gray20"),
         plot.subtitle = element_text(family = "serif", size = 10, color = "gray20"),
         plot.caption = element_text(family = "serif", face = "italic", size = 9, color = "gray35"))
