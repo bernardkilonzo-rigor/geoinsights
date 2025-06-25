@@ -30,7 +30,7 @@ map_1<-merged_data%>%ggplot(aes(geometry=geometry, label = commune,
         legend.text = element_text(family = "serif", size = 8))
 
 #saving the plot
-ggsave(plot = map_1, filename = "Polygon_map_1.png",
+ggsave(plot = map_1, filename = "Choropleth_map_1.png",
        width = 8, height = 6, units = "in", dpi = 300)
 
 #creating map using discrete legend
@@ -61,5 +61,5 @@ map_2<-merged_data%>%ggplot(aes(geometry=geometry, label = commune,
         legend.text = element_text(family = "serif", size = 8))
 
 #saving the plot
-ggsave(plot = map_2, filename = "Polygon_map_2.png",
+ggsave(plot = map_2, filename = "Choropleth_map_2.png",
        width = 8, height = 6, units = "in", dpi = 300)
