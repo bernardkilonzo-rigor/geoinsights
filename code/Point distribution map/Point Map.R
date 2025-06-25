@@ -52,7 +52,7 @@ p_map<-ggplot()+
         axis.title = element_blank(),
         axis.text = element_blank(),
         axis.ticks = element_blank(),
-        plot.background = element_rect(fill = "gray95"),
+        plot.background = element_rect(fill = "gray95",color = "gray95"),
         legend.background = element_rect(fill = "gray95"),
         legend.title = element_text(family = "serif", size = 10, color = "gray25"),
         legend.text = element_text(family = "serif", size = 9, color = "gray25"),
