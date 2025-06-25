@@ -1,9 +1,21 @@
+setwd("C:\\Users\\berna\\OneDrive\\Desktop\\Production\\geoinsights\\code\\Point distribution map")
 #load libraries
 library(tidyverse)
 library(maps)
 
 #load data
 conflict_data<-read.csv("https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/refs/heads/main/data/Conflict%20Fatalities.csv")
+
+#grouping fatalities cases into bins
+conflict_data<-conflict_data%>%mutate(bin = case_when(
+  Fatalities<=0 ~"0",
+  Fatalities<=10 ~"1-10",
+  Fatalities<=20 ~"11-20",
+  Fatalities<=30 ~"21-30",
+  Fatalities<=50 ~"31-50",
+  Fatalities<=100 ~"51-100",
+  Fatalities>100 ~"101+"
+))
 
 #load world map data
 world_map<-map_data("world")
@@ -22,10 +34,10 @@ africa_map <- world_map %>%
                        "Tunisia", "Uganda", "Zambia", "Zimbabwe"))
 
 #Creating point distribution map
-p_map<-ggplot()+
+ggplot()+
   geom_polygon(data = africa_map, aes(x =long, y = lat, group = group),
                fill ="white", color = "gray35", linewidth =0.1)+
-  geom_point(data = conflict_data, aes(x = Longitude, y = Latitude, size = Fatalities), alpha = 0.4)+
+  geom_point(data = conflict_data, aes(x = Longitude, y = Latitude, size = Fatalities, color = bin), alpha = 0.4)+
   coord_quickmap()+
   labs(title = "Political Conflict in Africa",
        subtitle = "Reported Fatalities by Location",
@@ -44,3 +56,9 @@ p_map<-ggplot()+
 #saving the plot
 ggsave(plot = p_map, filename = "Point_map.png",
        width = 8, height = 6, units = "in", dpi = 300) 
+
+install.packages("ggridges")
+library(ggridges)
+
+conflict_data%>%ggplot(aes(x = Fatalities))+
+  geom_density()
