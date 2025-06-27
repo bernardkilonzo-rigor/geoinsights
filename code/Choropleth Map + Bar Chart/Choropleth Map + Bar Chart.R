@@ -24,7 +24,6 @@ survey_sample<-survey_sample%>%mutate(bins = case_when(
 merged_data<-adm2_shapefiles%>%left_join(
   survey_sample, by =c("commune"="Commune"))
 
-
 #creating bar chart
 cplot<-survey_sample%>%group_by(bins)%>%
   summarise(sample =n_distinct(Id.Com))%>%
@@ -60,7 +59,9 @@ map<-merged_data%>%ggplot(aes(geometry=geometry, label = commune,
         legend.title = element_text(family = "serif", size = 8),
         legend.text = element_text(family = "serif", size = 8))
 
-
 #joining the two plots
 merged_plot<-map+inset_element(cplot, left = 0.0,bottom = 0.35,right = 0.3,top = 0.78)
 
+#saving the plot
+ggsave(plot = merged_plot, filename = "Choropleth_map+barplot.png",
+       width = 8, height = 6, units = "in", dpi = 300)
