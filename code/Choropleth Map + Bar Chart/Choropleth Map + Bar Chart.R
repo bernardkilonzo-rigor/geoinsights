@@ -24,7 +24,7 @@ survey_sample<-survey_sample%>%mutate(bins = case_when(
 merged_data<-adm2_shapefiles%>%left_join(
   survey_sample, by =c("commune"="Commune"))
 
-#creating bar chart
+#creating column chart
 cplot<-survey_sample%>%group_by(bins)%>%
   summarise(sample =n_distinct(Id.Com))%>%
   ggplot(aes(y = bins, x = sample, fill =bins))+
