@@ -42,7 +42,7 @@ cplot<-survey_sample%>%group_by(bins)%>%
         legend.position = "none",
         plot.title = element_text(family = "serif",face = "bold",size = 8, color = "gray25"))
 
-#creating the map (discrete legend)
+#creating a choropleth map
 map<-merged_data%>%ggplot(aes(geometry=geometry, label = commune,
                          fill = bins))+
   geom_sf(color ="white", linewidth = 0.1)+
