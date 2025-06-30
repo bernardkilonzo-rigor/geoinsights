@@ -8,6 +8,7 @@ library(patchwork)
 setwd("C:\\Users\\berna\\OneDrive\\Desktop\\Production\\dataviz\\code\\Map\\haiti_adm2_boundaries")
 survey_sample<-read.csv("https://raw.githubusercontent.com/bernardkilonzo-rigor/dataviz/refs/heads/main/data/Survey%20Sample.csv")
 adm2_shapefiles<-st_read("hti_boundaries_communes_adm2_cnigs_polygon.shp")#download the files and read them from your computer
+#access shape file data ("https://github.com/bernardkilonzo-rigor/geoinsights/tree/main/data")
 
 #grouping the sample size into bins
 survey_sample<-survey_sample%>%mutate(bins = case_when(
@@ -24,8 +25,8 @@ survey_sample<-survey_sample%>%mutate(bins = case_when(
 merged_data<-adm2_shapefiles%>%left_join(
   survey_sample, by =c("commune"="Commune"))
 
-#creating column chart
-cplot<-survey_sample%>%group_by(bins)%>%
+#creating a bar plot
+bplot<-survey_sample%>%group_by(bins)%>%
   summarise(sample =n_distinct(Id.Com))%>%
   ggplot(aes(y = bins, x = sample, fill =bins))+
   geom_bar(stat = "identity", width = 0.5)+
@@ -60,7 +61,7 @@ map<-merged_data%>%ggplot(aes(geometry=geometry, label = commune,
         legend.text = element_text(family = "serif", size = 8))
 
 #joining the two plots
-merged_plot<-map+inset_element(cplot, left = 0.0,bottom = 0.35,right = 0.3,top = 0.78)
+merged_plot<-map+inset_element(bplot, left = 0.0,bottom = 0.35,right = 0.3,top = 0.78)
 
 #saving the plot
 ggsave(plot = merged_plot, filename = "Choropleth_map+barplot.png",
