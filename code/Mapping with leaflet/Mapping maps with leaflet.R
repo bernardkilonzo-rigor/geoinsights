@@ -3,6 +3,7 @@ setwd("C:\\Users\\berna\\OneDrive\\Desktop\\Production\\geoinsights\\code\\Mappi
 library(sf)
 library(leaflet)
 library(janitor)
+library(dplyr)
 
 #load data set
 Facilities <- read.csv("https://raw.githubusercontent.com/bernardkilonzo-rigor/dataviz/main/data/Health%20facilities%20in%20Kibera.csv")%>%
@@ -17,7 +18,7 @@ leaflet(Facilities)%>%
 
 #creating color palette
 pal <- colorFactor(
-  palette = c("red","blue"),
+  palette = c("#ff9d23","#5b7e3c","#7f2020"),
   domain = Facilities$status
 )
 
@@ -27,9 +28,24 @@ leaflet(Facilities)%>%
   addCircleMarkers(
     ~longitude,
     ~latitude,
-    radius = 3,
+    radius = 4,
     color = ~pal(status),
-    fillOpacity = 0.4,
+    fillOpacity = 0.6,
     popup = ~paste0("<b>", name, "</b><br>Status: ", status))
 
 #using different icons for different categories
+#using awesome icons
+icons <- awesomeIcons(
+  icon = ifelse(Facilities$status == "operational", "window-close", "user-circle"),
+  iconColor = "white",
+  markerColor = ifelse(Facilities$status == "operational", "#5b7e3c", "#7f2020")
+)
+
+leaflet(Facilities)%>%
+  addProviderTiles("CartoDB.Positron") %>%
+  addAwesomeMarkers(
+    ~longitude,
+    ~latitude,
+    icon = icons,
+    popup = ~paste0("<b>", name, "</b><br>Status: ", status)
+  )
