@@ -30,6 +30,41 @@ leaflet(Facilities)%>%
              popup = ~paste0("<b>", name, "</b><br>Status: ", status),
              icon = facility_icon)
 
+#using different icons for different categories
+#computing facility categories
+Facilities <- Facilities%>%
+  mutate(
+    category = case_when(
+      type %in% c("hospital") ~ "hospital",
+      type %in% c("health_center","Health clinic", "health_programme") ~ "health_center",
+      TRUE ~ "Other"
+    )
+  )
+
+#using custom icons
+icons <- iconList(
+  hospital = makeIcon(
+    iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/hospital.png",
+    iconWidth = 24, iconHeight = 24
+  ),
+  health_center = makeIcon(
+    iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/health_center.png",
+    iconWidth = 24, iconHeight = 24
+  ),
+  Other = makeIcon(
+    iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/medic.png",
+    iconWidth = 24, iconHeight = 24
+  )
+)
+
+leaflet(Facilities)%>%
+  addTiles()%>%
+  addMarkers(~longitude,
+             ~latitude,
+             popup = ~paste0("<b>", name, "</b><br>category: ", category),
+             icon = icons[Facilities$category]
+             )
+
 #creating color palette
 pal <- colorFactor(
   palette = c("#ff9d23","#5b7e3c","#7f2020"),
@@ -47,19 +82,4 @@ leaflet(Facilities)%>%
     fillOpacity = 0.6,
     popup = ~paste0("<b>", name, "</b><br>Status: ", status))
 
-#using different icons for different categories
-#using awesome icons
-icons <- awesomeIcons(
-  icon = ifelse(Facilities$status == "operational", "window-close", "user-circle"),
-  iconColor = "white",
-  markerColor = ifelse(Facilities$status == "operational", "#5b7e3c", "#7f2020")
-)
 
-leaflet(Facilities)%>%
-  addProviderTiles("CartoDB.Positron") %>%
-  addAwesomeMarkers(
-    ~longitude,
-    ~latitude,
-    icon = icons,
-    popup = ~paste0("<b>", name, "</b><br>Status: ", status)
-  )
