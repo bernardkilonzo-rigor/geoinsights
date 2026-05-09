@@ -70,6 +70,7 @@ leaflet(Facilities)%>%
              icon = icons[Facilities$category]
              )
 
+#using circle markers with color
 #creating color palette
 pal <- colorFactor(
   palette = c("#ff9d23","#5b7e3c","#7f2020"),
