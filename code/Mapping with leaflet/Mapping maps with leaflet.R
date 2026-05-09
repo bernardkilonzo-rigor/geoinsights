@@ -16,6 +16,20 @@ leaflet(Facilities)%>%
              ~latitude,
              popup = ~name)
 
+#using a custom icons
+facility_icon <- makeIcon(
+  iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/Location%20icon.png", #your icon file
+  iconWidth = 25, #adjust width
+  iconHeight = 25 #adjust height
+)
+
+leaflet(Facilities)%>%
+  addTiles()%>%
+  addMarkers(~longitude,
+             ~latitude,
+             popup = ~paste0("<b>", name, "</b><br>Status: ", status),
+             icon = facility_icon)
+
 #creating color palette
 pal <- colorFactor(
   palette = c("#ff9d23","#5b7e3c","#7f2020"),
