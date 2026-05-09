@@ -36,7 +36,8 @@ Facilities <- Facilities%>%
   mutate(
     category = case_when(
       type %in% c("hospital") ~ "hospital",
-      type %in% c("health_center","Health clinic", "health_programme") ~ "health_center",
+      type %in% c("chemist_dispensing","chemist_over_the_counter") ~ "chemist",
+      type %in% c("medical_clinic") ~"clinic",
       TRUE ~ "Other"
     )
   )
@@ -47,8 +48,12 @@ icons <- iconList(
     iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/hospital.png",
     iconWidth = 24, iconHeight = 24
   ),
-  health_center = makeIcon(
+  chemist = makeIcon(
     iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/health_center.png",
+    iconWidth = 24, iconHeight = 24
+  ),
+  clinic = makeIcon(
+    iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/clinic.png",
     iconWidth = 24, iconHeight = 24
   ),
   Other = makeIcon(
@@ -81,5 +86,4 @@ leaflet(Facilities)%>%
     color = ~pal(status),
     fillOpacity = 0.6,
     popup = ~paste0("<b>", name, "</b><br>Status: ", status))
-
-
+            
