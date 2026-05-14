@@ -49,7 +49,7 @@ icons <- iconList(
     iconWidth = 24, iconHeight = 24
   ),
   chemist = makeIcon(
-    iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/health_center.png",
+    iconUrl = "https://raw.githubusercontent.com/bernardkilonzo-rigor/geoinsights/main/icons/settings.png",
     iconWidth = 24, iconHeight = 24
   ),
   clinic = makeIcon(
