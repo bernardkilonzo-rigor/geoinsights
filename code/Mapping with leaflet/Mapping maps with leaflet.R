@@ -3,7 +3,7 @@ setwd("C:\\Users\\berna\\OneDrive\\Desktop\\Production\\geoinsights\\code\\Mappi
 library(sf)
 library(leaflet)
 library(janitor)
-library(dplyr)
+library(tidyverse)
 
 #load data set
 Facilities <- read.csv("https://raw.githubusercontent.com/bernardkilonzo-rigor/dataviz/main/data/Health%20facilities%20in%20Kibera.csv")%>%
@@ -87,4 +87,15 @@ leaflet(Facilities)%>%
     color = ~pal(status),
     fillOpacity = 0.6,
     popup = ~paste0("<b>", name, "</b><br>Status: ", status))
-            
+
+#create a polygon map with leaflet
+#load data set
+setwd("C:\\Users\\berna\\OneDrive\\Desktop\\Production\\geoinsights\\code\\Choropleth Map\\haiti_adm2_boundaries")
+survey_sample<-read.csv("https://raw.githubusercontent.com/bernardkilonzo-rigor/dataviz/refs/heads/main/data/Survey%20Sample.csv")
+adm2_shapefiles<-st_read("hti_boundaries_communes_adm2_cnigs_polygon.shp")
+
+#joining the two data sets
+merged_data<-adm2_shapefiles%>%left_join(
+  survey_sample, by =c("commune"="Commune"))
+
+
