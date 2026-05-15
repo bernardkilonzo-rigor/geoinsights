@@ -98,4 +98,24 @@ adm2_shapefiles<-st_read("hti_boundaries_communes_adm2_cnigs_polygon.shp")
 merged_data<-adm2_shapefiles%>%left_join(
   survey_sample, by =c("commune"="Commune"))
 
+#create color pallette for polygons
+pal <- colorNumeric(
+  palette = "RdYlGn",
+  domain = merged_data$Sample.Size
+)
+
+#building polygon map using leaflet
+leaflet(merged_data)%>%
+  addProviderTiles("CartoDB.Positron")%>%
+  addPolygons(
+    fillColor = ~pal(Sample.Size),
+    weight = 1,
+    color = "white",
+    fillOpacity = 0.7,
+    smoothFactor = 0.5,
+    popup = ~paste0(
+      "<strong>Commune: </strong>", commune, "<br>",
+      "<strong>Survey Sample: </strong>", Sample.Size, "<br>"
+    )
+  )
 
